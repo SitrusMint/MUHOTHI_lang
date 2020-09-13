@@ -1,7 +1,12 @@
 mod lib;
-// use lib::{execute_bf};
 
-fn main() {
-    // TODO
+use lib::{execute_bf};
+use std::env;
+use std::fs;
+
+fn main() -> Result<(), 'static &str>{
+    let args: Vec<String> = env::args().collect();
+    let content = fs::read_to_string(&args[1]).expect("file couldn't be open");
+
+    execute_bf(&content) 
 }
-

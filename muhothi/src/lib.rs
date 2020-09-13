@@ -3,7 +3,7 @@ pub fn execute_bf(s :&String) -> Result<(), &str> {
 
     let mut count = 0;
     let mut i :usize = 0;
-    let mut note :usize = 0;
+    let note :usize = 0;
     while count != s.len() {
         match s.chars().nth(count).unwrap() {
             '+' => buf[i] += 1,
@@ -28,7 +28,8 @@ mod test {
     use super::{execute_bf};
     #[test]
     fn test_bf() {
-        let s = "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.+.+.>++++++++++.".to_string();
+        let s = "+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++.+.+.>++++++++++."
+        .to_string();
         match execute_bf(&s) {
             Ok(_) => assert!(true),
             Err(_) => assert!(false),
