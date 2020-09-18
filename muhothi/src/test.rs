@@ -1,4 +1,4 @@
-use super::bf::*;
+use super::bf::execute_bf;
 
 #[test]
 fn test_bf1() {
