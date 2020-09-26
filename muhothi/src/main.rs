@@ -1,4 +1,5 @@
-use muhothi::bf::{execute_bf};
+mod bf;
+use bf::{execute_bf};
 
 use std::env;
 use std::fs;
