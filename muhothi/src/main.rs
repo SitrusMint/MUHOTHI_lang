@@ -12,8 +12,7 @@ fn main() {
 
     let content = fs::read_to_string(&args[1]).unwrap();
 
-    match execute_bf(&content) {
-        Ok(_) => {},
-        Err(e) => println!("{}", e),
+    if let Err(e) = execute_bf(&content) {
+        println!("{}", e);
     }
 }
