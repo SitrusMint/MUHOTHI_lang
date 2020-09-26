@@ -14,5 +14,6 @@ fn main() {
 
     if let Err(e) = execute_bf(&content) {
         println!("{}", e);
+        std::process::exit(1);
     }
 }
